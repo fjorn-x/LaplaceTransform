@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laplace</title>
+    
+</head>
+<body>
+    <h1>Laplace Transformation</h1>
+    <form method="post" action="{{ url_for('operation_result') }}" id="calculator_form">
+        <label for="Input1">Input1:</label>
+        <input type="text" name="Input1" id="Input1">
+        <br/>
+        <label for="Input2">Input2:</label>
+        <input type="Input2" name="Input2" id="Input2">
+        <br/>
+        <label for="operation">Operation</label>
+        <select id="operation" name="operation">
+            <option value="a">Constant</option>
+            <option value="b">Exponential</option>
+            <option value="c">Sine</option>
+            <option value='d'>Cosine</option>
+            <option value='e'>T</option>
+            <option value='f'>Exponential-Cos</option>
+            <option value='g'>Exponential-Sine</option>
+            <option value='h'>Exponential-T</option>
+            <option value='i'>Exponential-Sin h</option>
+            <option value='j'>Exponential-Cos h</option>
+
+        </select>
+        <br/>
+        <input type="submit" value="Submit"/>
+        
+        
+    </form>
+    {% if calculation_success == True %}
+        <br/>
+        <p>The Laplace Transformation is: {{result1}}</p>
+    {% endif %}
+    {% if calculation_success == False %}
+        <br/>
+        <p>{{error}}</p>
+        <p>{{input1}} {{operation}} {{input2}} = "{{result2}}"</p>
+    {% endif %}
+</body>
+</html>
