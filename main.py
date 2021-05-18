@@ -18,40 +18,40 @@ def operation_result() :
         input2=int(second_input)
         while True:
             if operation== 'a' :
-                result_num, result_den=func.constant(input1,input2);
+                num, den=func.constant(input1,input2);
                 break;
             elif operation=='b' :
-                result_num, result_den=func.expo(input1,input2);
+                num, den=func.expo(input1,input2);
                 break;
             elif operation=='c' :
-                result=str(func.sine(input1,input2));
+                num, den=func.sine(input1,input2);
                 break;
             elif operation=='d' :
-                result=str(func.cos(input1,input2))
+                num, den=func.cos(input1,input2)
                 break;
             elif operation=='e' :
-                result=str(func.tfunc(input1,input2))
+                num, den=func.tfunc(input1,input2)
                 break;
             elif operation=='f' :
-                result=str(func.expo_cos(input1,input2))
+                num, den=func.expo_cos(input1,input2)
                 break;
             elif operation=='g' :
-                result=str(func.expo_sin(input1,input2))
+                num, den=func.expo_sin(input1,input2)
                 break;
             elif operation=='h' :
-                result=str(func.t_expo(input1,input2))
+                num, den=func.t_expo(input1,input2)
                 break;
             elif operation=='i' :
-                result=str(func.expo_sinh(input1,input2))
+                num, den=func.expo_sinh(input1,input2)
                 break;
             elif operation=='j' :
-                result=str(func.expo_cosh(input1,input2))
+                num, den=func.expo_cosh(input1,input2)
                 break;
             elif operation =='k' :
-                result=str(func.sinh(input1,input2))
+                num, den=func.sinh(input1,input2)
                 break;
             elif operation =='l' :
-                result=str(func.cosh(input1,input2))
+                num, den=func.cosh(input1,input2)
                 break;
        
         return render_template(
@@ -59,8 +59,8 @@ def operation_result() :
             input1=first_input,
             input2=second_input,
             operation=operation,
-            result_num=result_num,
-            result_den=result_den,
+            result_num=num,
+            result_den=den,
             calculation_success=True
         )
 
