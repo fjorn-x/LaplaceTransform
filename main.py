@@ -18,10 +18,10 @@ def operation_result() :
         input2=int(second_input)
         while True:
             if operation== 'a' :
-                result=str(func.constant(input1,input2));
+                result_num, result_den=func.constant(input1,input2);
                 break;
             elif operation=='b' :
-                result=str(func.expo(input1,input2));
+                result_num, result_den=func.expo(input1,input2);
                 break;
             elif operation=='c' :
                 result=str(func.sine(input1,input2));
@@ -47,13 +47,20 @@ def operation_result() :
             elif operation=='j' :
                 result=str(func.expo_cosh(input1,input2))
                 break;
+            elif operation =='k' :
+                result=str(func.sinh(input1,input2))
+                break;
+            elif operation =='l' :
+                result=str(func.cosh(input1,input2))
+                break;
        
         return render_template(
             'index.html',
             input1=first_input,
             input2=second_input,
             operation=operation,
-            result1=result,
+            result_num=result_num,
+            result_den=result_den,
             calculation_success=True
         )
 
@@ -85,6 +92,7 @@ def info() :
 @app.route('/about')
 def about() :
     return render_template('about.html')
+
     
 if __name__=="__main__" :
     app.run(debug=True,host="localhost")

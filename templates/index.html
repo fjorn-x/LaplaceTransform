@@ -4,19 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laplace</title>
+   
+    <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/information">Information</a></li>
+          <li><a href="/about">About</a></li>
+          
+          
+        </ul>
+      </nav> 
     
 </head>
-<body>
-    <h1>Laplace Transformation</h1>
+<body> 
+     
+    <style> 
+        
+        ul{ 
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li{
+            
+            float: left;
+           
+            
+        }
+        li a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            
+        }
+        li a:hover {
+            background-color: darkcyan;
+        }
+        input{
+            padding-bottom: 10px;
+            font-size: medium;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border-color: grey;
+            border-style: inset;
+            text-align: center;
+           
+        }
+        select{
+            border-radius: 8px;
+            border-style: inset;
+            margin-bottom: 10px;
+            
+
+        }
+        
+        label{
+            padding: 10px;
+            margin: auto;
+        }
+      
+        form{
+            text-align: left;
+            padding-bottom: 10px;
+        }
+        h1{
+        background-color: white;
+        text-align: center;
+        border-style: inset;
+        border-left: 10px solid rgb(132, 192, 172);
+        border-right: 10px solid rgb(132, 192, 172);
+        padding: 20px;
+    }
+    div {
+        padding-top: 50px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+        padding-left: 80px;
+        
+        font-size: medium;
+        margin-bottom: 0px;
+        background-color: transparent;
+    }
+    
+    .contianer3{
+        text-align: center;
+        
+    }
+    .xyz{
+        text-align: center;
+        background-color: rgb(132, 192, 172);
+        border-radius: 10px;
+        padding: 5px 5px;
+        color: white;
+      
+    }
+
+    .frac {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+    }
+    .frac > span {
+        display: block;
+        padding: 0.1em;
+    }
+    .frac span.bottom {
+        border-top: thin solid black;
+    }
+    .frac span.symbol {
+        display: none;
+    } 
+        
+    
+    </style>
+    <div >
+    <h1>LAPLACE TRANSFORMATION</h1>
+    <div class="container3">
     <form method="post" action="{{ url_for('operation_result') }}" id="calculator_form">
-        <label for="Input1">Input1:</label>
+        <label for="Input1" style="font-size: 18px;">Input1:</label>
         <input type="text" name="Input1" id="Input1">
         <br/>
-        <label for="Input2">Input2:</label>
+        <label for="Input2" style="font-size: 18px;">Input2:</label>
         <input type="Input2" name="Input2" id="Input2">
         <br/>
-        <label for="operation">Operation</label>
-        <select id="operation" name="operation">
+        
+        <label for="operation" style="font-size: 18px;">Operation</label>
+        <select id="operation" name="operation" style="font-size: 18px;">
+            
             <option value="a">Constant</option>
             <option value="b">Exponential</option>
             <option value="c">Sine</option>
@@ -27,21 +147,37 @@
             <option value='h'>Exponential-T</option>
             <option value='i'>Exponential-Sin h</option>
             <option value='j'>Exponential-Cos h</option>
-
+            <option value='k'>Sin h</option>
+            <option value='l'>Cos h</option>
         </select>
+    
         <br/>
-        <input type="submit" value="Submit"/>
-        
+        </div>
+        <input type="submit" value="Submit" style="border: none; background-color: rgb(132, 192, 172); color: white; padding: 5px 10px; text-align:center; display:inline-block; font-size:16px; border-radius:8px;"/>
+    </div>
         
     </form>
+    <div class="xyz">
     {% if calculation_success == True %}
         <br/>
-        <p>The Laplace Transformation is: {{result1}}</p>
+        <p>The Laplace Transformation is: 
+        <div class="frac">
+        <span>{{result_num}}</span>
+        <span class="symbol">/</span>
+        <span class="bottom">{{result_den}}</span>
+        </p>
+        </div>
     {% endif %}
     {% if calculation_success == False %}
         <br/>
+        
         <p>{{error}}</p>
-        <p>{{input1}} {{operation}} {{input2}} = "{{result2}}"</p>
+        <p>{{input1}} {{operation}} {{input2}} = "{{result2}}"</p> 
+    
     {% endif %}
+</div>
+    </div>
+    </div>
+  
 </body>
 </html>

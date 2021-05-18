@@ -1,5 +1,179 @@
 <html>
+<head>
+<nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/information">Information</a></li>
+          <li><a href="/about">About</a></li>
+          
+          
+        </ul>
+      </nav> 
+</head>
+      <style>
+        ul{ 
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li{
+            
+            float: left;
+           
+            
+        }
+        li a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none; 
+        }
+        li a:hover {
+            background-color: #111;
+        }
+        
+        * {
+         box-sizing: border-box;
+         border-radius: 8px;
+        }
+        .box {
+            float: left;
+            width: 600px;
+            padding: 50px;
+          }
+          
+          .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+        .information {
+          padding:10px;
+        }
+
+    
+      </style>
 <body>
-<p> hello world</p
+<br>
+
+<div class='box', align='left',id="const">
+<h3>Constant : </h3>
+<img src="{{url_for('static', filename='const.png')}}" align="left"/>
+<br>
+<br>
+<p> Laplace Transform of Constant requires only one value.</p>
+<p>Therefore,
+<p>Input1 = Constant Value,</p>
+<p>Input2 = 0.</p>
+</div>
+
+<div class='box', align='left',id="const">
+<h3>Exponential : </h3>
+<img src="{{url_for('static', filename='expo.png')}}" align="left"/>
+<br>
+<br>
+<p> Laplace Transform of Exponential Function requires two inputs.</p>
+<p>Therefore,
+<p>Input1 = Constant Value,</p>
+<p>Input2 = 	&#945.</p>
+</div>
+
+<div class='box', align='left',id="const">
+<h3>Sine : </h3>
+<img src="{{url_for('static', filename='sine.png')}}" align="left"/>
+<br>
+<br>
+<p> Laplace Transform of Sine Function requires two inputs.</p>
+<p>Therefore,
+<p>Input1 = Constant Value,</p>
+<p>Input2 = 	&#969.</p>
+</div>
+
+<div class='box', align='left',id="const">
+<h3>Cosine : </h3>
+<img src="{{url_for('static', filename='cosine.png')}}" align="left"/>
+<br>
+<br>
+<br>
+<p> Laplace Transform of Cosine Function requires two inputs.</p>
+<p>Therefore,
+<p>Input1 = Constant Value,</p>
+<p>Input2 = 	&#969.</p>
+</div>
+
+<div class='box', align='left',id="const">
+<h3>T : </h3>
+<img src="{{url_for('static', filename='tfunc.png')}}" align="left"/>
+<br>
+<br>
+<p> Laplace Transform of T Function requires two inputs.</p>
+<p>Therefore,
+<p>Input1 = Constant Value,</p>
+<p>Input2 = n.</p>
+</div>
+
+<div class='box', align='left',id="const">
+<h3>Exponential-Cosine (First Shifting of Cosine) : </h3>
+<img src="{{url_for('static', filename='expocos.png')}}" align="left"/>
+<br>
+<br>
+<p> The first shifting of Cosine  requires two inputs.</p>
+<p>Therefore,
+<p>Input1 = &#945,</p>
+<p>Input2 = 	&#969.</p>
+</div>
+
+<div class='box', align='left',id="const">
+<h3>Exponential-Sine (First Shifting of Sine) : </h3>
+<img src="{{url_for('static', filename='exposine.png')}}" align="left"/>
+<br>
+<br>
+<br>
+<p> The first shifting of Sine requires two inputs.</p>
+<p>Therefore,
+<p>Input1 = &#945,</p>
+<p>Input2 = 	&#969.</p>
+</div>
+
+<div class='box', align='left',id="const">
+<h3>Exponential-T (First Shifting of T) : </h3>
+<img src="{{url_for('static', filename='expot.gif')}}" align="left"/>
+<br>
+<br>
+<br>
+<p> The first shifting of T requires two inputs.</p>
+<p>Therefore,
+<p>Input1 = n,</p>
+<p>Input2 = 	&#945.</p>
+</div>
+
+<div class='box', align='left',id="const">
+<h3>Sin h : </h3>
+<img src="{{url_for('static', filename='sinh.png')}}" align="left"/>
+<br>
+<br>
+<br>
+<p> Laplace Transform of Sin h Function requires two inputs.</p>
+<p>Therefore,
+<p>Input1 = Constant Value,</p>
+<p>Input2 = 	&#945.</p>
+</div>
+
+<div class='box', align='left',id="const">
+<h3>Cos h : </h3>
+<img src="{{url_for('static', filename='cosh.png')}}" align="left"/>
+<br>
+<br>
+<br>
+<p> Laplace Transform of Cos h Function requires two inputs.</p>
+<p>Therefore,
+<p>Input1 = Constant Value,</p>
+<p>Input2 = 	&#945.</p>
+</div>
+
+
 </body>
 </html>
