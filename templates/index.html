@@ -7,7 +7,7 @@
    
     <nav>
         <ul>
-          <li><a href="/">Home</a></li>
+          <li><a href="/index">Home</a></li>
           <li><a href="/information">Information</a></li>
           <li><a href="/about">About</a></li>
           
@@ -19,7 +19,7 @@
 <body> 
      
     <style> 
-        
+  
         ul{ 
             list-style-type: none;
             margin: 0;
@@ -78,6 +78,13 @@
         border-left: 10px solid rgb(132, 192, 172);
         border-right: 10px solid rgb(132, 192, 172);
         padding: 20px;
+        transition: 2s;
+    }
+    h1:hover{
+        background-color: rgb(132, 192, 172);
+        color:white;
+        border-left: 10px solid black;
+        border-right: 10px solid black;
     }
     div {
         padding-top: 50px;
@@ -90,7 +97,7 @@
         background-color: transparent;
     }
     
-    .contianer3{
+    .container3{
         text-align: center;
         
     }
@@ -120,6 +127,8 @@
     .frac span.symbol {
         display: none;
     } 
+
+  
         
     
     </style>
@@ -127,10 +136,10 @@
     <h1>LAPLACE TRANSFORMATION</h1>
     <div class="container3">
     <form method="post" action="{{ url_for('operation_result') }}" id="calculator_form">
-        <label for="Input1" style="font-size: 18px;">Input1:</label>
+        <label for="Input1" style="font-size: 18px;">Input1</label>
         <input type="text" name="Input1" id="Input1">
         <br/>
-        <label for="Input2" style="font-size: 18px;">Input2:</label>
+        <label for="Input2" style="font-size: 18px;">Input2</label>
         <input type="Input2" name="Input2" id="Input2">
         <br/>
         

@@ -4,7 +4,11 @@ import func
 
 app=Flask("__name__")
 
-@app.route("/", methods=['GET'])
+@app.route('/')
+def welcome() :
+    return render_template('welcome.html')
+
+@app.route("/index", methods=['GET'])
 def index():
     return render_template("index.html")
 
@@ -53,7 +57,7 @@ def operation_result() :
             elif operation =='l' :
                 num, den=func.cosh(input1,input2)
                 break;
-       
+    
         return render_template(
             'index.html',
             input1=first_input,
@@ -84,7 +88,7 @@ def operation_result() :
             calculation_success=False,
             error="Cannot perform operations with provided inputs"
         )
-  
+
 @app.route('/information')
 def info() :
     return render_template('information.html')
@@ -93,6 +97,6 @@ def info() :
 def about() :
     return render_template('about.html')
 
-    
+        
 if __name__=="__main__" :
     app.run(debug=True,host="localhost")

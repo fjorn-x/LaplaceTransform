@@ -87,6 +87,7 @@ def sinh(a,b) :
     den='s^2 - '+str(int(pow(b,2)))
     return num,den
 
+
 def cosh(a,b) :
     num=str(a)+'s'
     den='(s^2 - '+str(int(pow(b,2)))+')'
